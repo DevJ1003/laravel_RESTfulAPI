@@ -1,0 +1,6 @@
+Steps to create and start developeing a laravel project
+
+1. er model
+2. generate models
+3. create controllers (controllers are the classes that can handles communication between models and return responses)
+4. create routes for RESTful API
