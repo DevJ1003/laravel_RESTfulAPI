@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Http\Request;
+// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +17,19 @@ use Illuminate\Http\Request;
 */
 
 // Buyers
-Route::resource('buyers', 'Buyer/BuyerController');
+Route::resource('buyers', \App\Http\Controllers\Buyer\BuyerController::class, ['only' => ['index', 'show']]);
+
+// Sellers
+Route::resource('sellers', \App\Http\Controllers\Seller\SellerController::class, ['only' => ['index', 'show']]);
+
+// Products
+Route::resource('products', \App\Http\Controllers\Product\ProductController::class, ['only' => ['index', 'show']]);
+
+// Categories
+Route::resource('categories', \App\Http\Controllers\Category\CategoryController::class, ['except' => ['create', 'edit']]);
+
+// Transactions
+Route::resource('transactions', \App\Http\Controllers\Transaction\TransactionController::class, ['only' => ['index', 'show']]);
+
+// Users
+Route::resource('users', \App\Http\Controllers\User\UserController::class, ['except' => ['create', 'edit']]);
