@@ -9,6 +9,7 @@ Steps to create and start developeing a laravel project
 7. implementing migration for RESTful API in pivot table
 8. create laravel factories for database seeding
 9. Issue all code which need to be executed during database seeding in 'seeds\DatabaseSeeder.php' file
+10. Implementation of the controllers
 
 
 

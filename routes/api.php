@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\Middleware;
 // use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+// Route::middleware()('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 // Buyers
 Route::resource('buyers', \App\Http\Controllers\Buyer\BuyerController::class, ['only' => ['index', 'show']]);
@@ -32,4 +37,6 @@ Route::resource('categories', \App\Http\Controllers\Category\CategoryController:
 Route::resource('transactions', \App\Http\Controllers\Transaction\TransactionController::class, ['only' => ['index', 'show']]);
 
 // Users
+// Route::middleware('api')->group(function () {
 Route::resource('users', \App\Http\Controllers\User\UserController::class, ['except' => ['create', 'edit']]);
+// });
