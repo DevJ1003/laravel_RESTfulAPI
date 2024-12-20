@@ -15,8 +15,15 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__ . '/../routes/console.php',
         health: '/up',
     )
+    // ->withMiddleware(function (Middleware $middleware) {
+    //     //
+    // })
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->validateCsrfTokens(except: [
+            'users/*',
+            'http://127.0.0.1:8000/users',
+            'http://127.0.0.1:8000/users/*',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
