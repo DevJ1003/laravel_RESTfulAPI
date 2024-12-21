@@ -5,10 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Buyer;
 use App\Models\Product;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 // use App\Product;
 
 class Transaction extends Model
 {
+
+    use HasFactory;
+
     protected $fillable = [
         'quantity',
         'buyer_id',
