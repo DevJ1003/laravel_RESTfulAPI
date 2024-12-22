@@ -15,5 +15,11 @@ Steps to create and start developeing a laravel project
 
 
 ================================================================================
+============================= <NOT VERY IMPORTANT> =============================
+11. Mutators and accessors
+12. generalise the response methods
+13. generalise methods for error responses
+
+================================================================================
 1. factories
 2. database seeding configuration in 'seeds\DatabaseSeeder.php'.
