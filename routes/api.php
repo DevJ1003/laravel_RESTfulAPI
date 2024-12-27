@@ -21,6 +21,12 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
+// In routes/api.php
+// Route::post('/test', function () {
+//     return response()->json(['status' => 'success', 'message' => 'Test route is working']);
+// });
+
+
 // Buyers
 Route::resource('buyers', \App\Http\Controllers\Buyer\BuyerController::class, ['only' => ['index', 'show']]);
 
