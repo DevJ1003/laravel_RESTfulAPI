@@ -10,6 +10,8 @@ Steps to create and start developeing a laravel project
 8. create laravel factories for database seeding
 9. Issue all code which need to be executed during database seeding in 'seeds\DatabaseSeeder.php' file
 10. Implementation of the controllers
+14. exception handling
+15. implicit model binding
 
 
 
