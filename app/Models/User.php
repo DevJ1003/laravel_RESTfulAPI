@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Str;
@@ -10,8 +11,7 @@ use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
-    use Notifiable;
-    use HasFactory;
+    use Notifiable, HasFactory, SoftDeletes;
 
     const VERIFIED_USER = '1';
     const UNVERIFIED_USER = '0';
@@ -19,6 +19,7 @@ class User extends Authenticatable
     const ADMIN_USER = 'true';
     const NORMAL_USER = 'false';
 
+    protected $dates = ['deleted_at'];
     protected $table = 'users';
 
     /**
