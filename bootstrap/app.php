@@ -23,6 +23,10 @@ return Application::configure(basePath: dirname(__DIR__))
             'users/*',
             'http://127.0.0.1:8000/users',
             'http://127.0.0.1:8000/users/*',
+
+            'categories/*',
+            'http://127.0.0.1:8000/categories',
+            'http://127.0.0.1:8000/categories/*',
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
