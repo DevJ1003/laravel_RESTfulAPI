@@ -36,6 +36,9 @@ Route::resource('buyers.categories', \App\Http\Controllers\Buyer\BuyerCategoryCo
 
 // Sellers
 Route::resource('sellers', \App\Http\Controllers\Seller\SellerController::class, ['only' => ['index', 'show']]);
+Route::resource('sellers.transactions', \App\Http\Controllers\Seller\SellerTransactionController::class, ['only' => ['index']]);
+Route::resource('sellers.categories', \App\Http\Controllers\Seller\SellerCategoryController::class, ['only' => ['index']]);
+Route::resource('sellers.buyers', \App\Http\Controllers\Seller\SellerBuyerController::class, ['only' => ['index']]);
 
 // Products
 Route::resource('products', \App\Http\Controllers\Product\ProductController::class, ['only' => ['index', 'show']]);
