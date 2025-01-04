@@ -27,6 +27,11 @@ return Application::configure(basePath: dirname(__DIR__))
             'categories/*',
             'http://127.0.0.1:8000/categories',
             'http://127.0.0.1:8000/categories/*',
+
+            'sellers/*',
+            'http://127.0.0.1:8000/categories',
+            'http://127.0.0.1:8000/categories/*',
+
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
