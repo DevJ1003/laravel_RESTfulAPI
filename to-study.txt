@@ -1,0 +1,30 @@
+to-study
+
+roles
+
+composer.json
+composer.lock
+package.json
+.env
+magic functions
+middlewares
+composer
+database transactions
+mysqli and pdo
+oops concepts
+$ and $$ difference
+
+
+user request -> routes -> controller -> model -> database -> model -> controller -> response
+
+
+user request -> routes -> middleware -> controller -> model -> database -> model -> controller -> response
+
+
+transactions start
+q1
+q2
+q3
+q4
+q5
+transactions commit
